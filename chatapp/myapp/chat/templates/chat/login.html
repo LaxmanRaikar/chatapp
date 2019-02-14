@@ -1,0 +1,21 @@
+
+{% block body_block %}
+<body BGCOLOR="#F5D69E">
+  <div class="container">
+    <div class="jumbotron">
+      <h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-sluu5q5UljhHkiExP_b867CkpAOhoKa3sKIXjg4rE10rTS5w" width="1280" height="100">
+      </h1>
+<form method="post" action="{% url 'chat:user_login' %}">
+          {% csrf_token %}
+          {# A more "HTML" way of creating the login form#}
+          <label for="username">Username:</label>
+          <input type="text" name="username" placeholder="Username">
+<label for="password">Password:</label>
+          <input type="password" name="password" placeholder="Password">
+<input type="submit" name="" value="Login">
+</form>
+</div>
+      
+  </div>
+</body>
+{% endblock %}
